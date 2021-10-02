@@ -135,5 +135,6 @@ SIMPLE_CHATBOT = {
         ("myapp.responses.GreetingResponse", "Greeting"),
         ("myapp.responses.GoodbyeResponse", "Goodbye"),
         ("myapp.responses.ProductInformationResponse", "Information"),
+        ("myapp.responses.UnableToAnswer", "Unable"),
     ),
 }

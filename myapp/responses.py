@@ -1,5 +1,5 @@
 from simple_chatbot.responses import GenericRandomResponse
-
+print("chebra chebra")
 
 class GreetingResponse(GenericRandomResponse):
     choices = ("Hey, how can I help you?",
@@ -20,5 +20,5 @@ class ProductInformationResponse(GenericRandomResponse):
 
 class UnableToAnswer(GenericRandomResponse):
     choices = (
-        "System is unable to reply your message."
+        "System is unable to reply your message.",
     )
