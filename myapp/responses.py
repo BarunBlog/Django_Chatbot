@@ -1,5 +1,4 @@
 from simple_chatbot.responses import GenericRandomResponse
-print("chebra chebra")
 
 class GreetingResponse(GenericRandomResponse):
     choices = ("Hey, how can I help you?",

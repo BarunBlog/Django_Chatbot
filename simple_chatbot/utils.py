@@ -17,7 +17,6 @@ class PatternMatcher:
         statistics = dict()
         if not self.patterns:
             self.patterns = apps.get_model('simple_chatbot.Pattern').objects.filter(string = 'abcdxyzuiooo')
-            print(self.patterns)
         for pattern in self.patterns:
             match_ratio = self.get_token_match_ratio(
                 input_token_list=self.tokens,
@@ -37,14 +36,7 @@ class PatternMatcher:
         # Pattern must not be unique in abs
 
         statistics = self.get_pattern_statistics()
-        print(statistics)
-        '''if not statistics:
-            statistics = dict()
-            statistics.update({0: apps.get_model('simple_chatbot.Tag').objects.get(id = 2)}) 
-        print(statistics)'''
         abs_list = list(statistics.keys())
-        '''if not abs_list:
-            abs_list.append(0)'''
         min_abs = min(abs_list)
         tags = [pattern.tag for pattern in statistics[min_abs]]
         tag_counter = dict(Counter(tags))
